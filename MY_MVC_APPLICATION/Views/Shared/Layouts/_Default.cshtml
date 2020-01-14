@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+
+	<title>@ViewBag.Title</title>
+
+	<link href="@(Links.Content.bootstrap_min_css)" rel="stylesheet" />
+	<link href="@(Links.Content.bootstrap_theme_min_css)" rel="stylesheet" />
+	<link href="@(Links.Content.Site_css)" rel="stylesheet" />
+
+	<style>
+		body {
+			margin-top: 20px;
+			height: 600px;
+			/*background-color: #96b4d4;*/
+			background: linear-gradient(to bottom right, #f698c9 0%, #a39292 100%);
+			background-repeat: no-repeat;
+		}
+	</style>
+
+	@RenderSection(name: "StyleSheetExceptions", required: false)
+</head>
+<body>
+	<div class="container">
+		@RenderBody()
+	</div>
+
+	<script src="@(Links.Scripts.jquery_3_4_1_min_js)"></script>
+	<script src="@(Links.Scripts.jquery_validate_min_js)"></script>
+	<script src="@(Links.Scripts.jquery_validate_unobtrusive_min_js)"></script>
+	<script src="@(Links.Scripts.bootstrap_min_js)"></script>
+
+	@RenderSection(name: "JavaScriptExceptions", required: false)
+</body>
+</html>

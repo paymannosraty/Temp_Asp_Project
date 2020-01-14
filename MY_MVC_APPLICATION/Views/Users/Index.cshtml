@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Models.User>
+
+@{
+	string title = "User List";
+	ViewBag.Title = title;
+}
+
+<h2>@(title)</h2>
+
+<div class="row">
+	<div class="col-xs-12">
+		@Html.ActionLink("Create New User", MVC.Users.Create())
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 table-responsive">
+		<table class="table table-bordered table-condensed table-striped table-hover" style="background-color:#acacac;">
+			<tr>
+				<th></th>
+				<th></th>
+				<th>
+					@Html.DisplayNameFor(model => model.Role.Name)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.IsActive)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Age)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Username)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Password)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.FullName)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Description)
+				</th>
+			</tr>
+
+			@{
+				int rowIndex = 0;
+				foreach (var item in Model)
+				{
+					rowIndex++;
+
+					<tr>
+						<td>@rowIndex</td>
+						<td>
+							@Html.ActionLink("Details", MVC.Users.Details(item.Id))
+							|
+							@Html.ActionLink("Edit", MVC.Users.Edit(item.Id))
+							|
+							@Html.ActionLink("Delete", MVC.Users.Delete(item.Id))
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Role.Name)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.IsActive)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Age)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Username)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Password)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.FullName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Description)
+						</td>
+					</tr>
+				}
+			}
+		</table>
+	</div>
+</div>

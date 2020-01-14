@@ -1,0 +1,15 @@
+﻿@{
+	string title = "Home";
+	ViewBag.Title = title;
+}
+
+<h2>
+	@(title)
+</h2>
+
+@Html.ActionLink("Role", MVC.Roles.Index())
+<br />
+@Html.ActionLink("User", MVC.Users.Index())
+<br />
+@Html.ActionLink("Traffic", MVC.Traffics.Index())
+
