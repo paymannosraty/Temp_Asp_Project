@@ -338,6 +338,15 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\BaseController.cs" />
+    <Compile Include="Migrations\202001132119006_InitialCreate.cs" />
+    <Compile Include="Migrations\202001132119006_InitialCreate.designer.cs">
+      <DependentUpon>202001132119006_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001160617104_StartTime.cs" />
+    <Compile Include="Migrations\202001160617104_StartTime.designer.cs">
+      <DependentUpon>202001160617104_StartTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Traffic.cs" />
@@ -393,6 +402,14 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001132119006_InitialCreate.resx">
+      <DependentUpon>202001132119006_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001160617104_StartTime.resx">
+      <DependentUpon>202001160617104_StartTime.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

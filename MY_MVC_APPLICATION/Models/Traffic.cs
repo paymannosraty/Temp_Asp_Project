@@ -26,11 +26,11 @@
 		// **********
 
 		// **********
-		public System.DateTime StartTime { get; set; }
+		public System.TimeSpan StartTime { get; set; }
 		// **********
 
 		// **********
-		public System.DateTime EndTime { get; set; }
+		public System.TimeSpan EndTime { get; set; }
 		// **********
 		// **********
 		//public System.TimeSpan Duration { get; set; }
