@@ -346,6 +346,10 @@
     <Compile Include="Migrations\202001160617104_StartTime.designer.cs">
       <DependentUpon>202001160617104_StartTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001171406278_EditTraffics.cs" />
+    <Compile Include="Migrations\202001171406278_EditTraffics.designer.cs">
+      <DependentUpon>202001171406278_EditTraffics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
@@ -409,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001160617104_StartTime.resx">
       <DependentUpon>202001160617104_StartTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001171406278_EditTraffics.resx">
+      <DependentUpon>202001171406278_EditTraffics.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,6 +21,9 @@
 		// **********
 		[System.ComponentModel.DataAnnotations.Required
 			(AllowEmptyStrings = false)]
+		
+		[System.ComponentModel.DataAnnotations.DisplayFormat
+			(ApplyFormatInEditMode = true, DataFormatString = "{0:dddd, yyyy/MM/dd}")]
 
 		public System.DateTime Date { get; set; }
 		// **********
@@ -32,8 +35,8 @@
 		// **********
 		public System.TimeSpan EndTime { get; set; }
 		// **********
+
 		// **********
-		//public System.TimeSpan Duration { get; set; }
 		private System.TimeSpan duration;
 
 		public System.TimeSpan Duration
@@ -47,7 +50,6 @@
 				duration = EndTime - StartTime;
 			}
 		}
-
 		// **********
 
 	}

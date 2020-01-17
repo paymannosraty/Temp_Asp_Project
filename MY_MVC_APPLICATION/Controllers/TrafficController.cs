@@ -15,13 +15,12 @@ namespace MY_MVC_APPLICATION.Controllers
 		{
 			var result =
 				MyDatabaseContext.Traffics;
-
+			
 			return View(model:
 				result
 				.OrderBy(current => current.User.Username)
 				.ToList());
 		}
-
 
 		// GET: Traffics/Details/5
 		[System.Web.Mvc.HttpGet]
