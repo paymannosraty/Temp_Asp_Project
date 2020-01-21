@@ -2,17 +2,61 @@
 	string title = "Home";
 	ViewBag.Title = title;
 }
+<head>
+	<style>
 
+		.MenuDiv {
+			background-color: #f0bff7;
+		}
+
+			.MenuDiv > ul {
+				list-style: none;
+				margin: 0;
+			}
+
+				.MenuDiv > ul > li {
+					display: inline-block;
+				}
+
+					.MenuDiv > ul > li > a {
+						text-decoration: none;
+						display: inline-block;
+						color: #555555;
+						font-size: 16px;
+						padding: 10px 20px;
+						transition: 0.7s;
+						font-family: 'Times New Roman';
+						font-weight: bold;
+					}
+
+						.MenuDiv > ul > li > a:hover {
+							background-color: #d5f8f8;
+						}
+	</style>
+</head>
 <h2>
 	@(title)
 </h2>
 
 @Html.AntiForgeryToken()
 
-@Html.ActionLink("Role", MVC.Roles.Index())
-<br />
-@Html.ActionLink("User", MVC.Users.Index())
-<br />
-@Html.ActionLink("Traffic", MVC.Traffics.Index())
-<br />
-@Html.ActionLink("Login", MVC.Login.Index())
+<div class="MenuDiv">
+
+	<ul class="MenuList">
+
+		<li><a href="@Url.Action(controllerName: "Roles", actionName: "Index")">Roles</a></li>
+		<li><a href="@Url.Action(controllerName: "Users", actionName: "Index")">Users</a></li>
+		<li><a href="@Url.Action(controllerName: "Traffics", actionName: "Index")">Trrafics</a></li>
+		<li><a href="@Url.Action(controllerName: "Login", actionName: "Index")">Log Out</a></li>
+
+	</ul>
+
+</div>
+
+@*@Html.ActionLink("Role", MVC.Roles.Index())
+	<br />
+	@Html.ActionLink("User", MVC.Users.Index())
+	<br />
+	@Html.ActionLink("Traffic", MVC.Traffics.Index())
+	<br />
+	@Html.ActionLink("Login", MVC.Login.Index())*@
