@@ -54,7 +54,7 @@ namespace MY_MVC_APPLICATION.Controllers
 
 			}
 
-			return View();
+			return View(MVC.Login.Index());
 		}
 	}
 }

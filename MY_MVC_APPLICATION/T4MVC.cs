@@ -28,6 +28,7 @@ using T4MVC;
 public static partial class MVC
 {
     public static MY_MVC_APPLICATION.Controllers.HomeController Home = new MY_MVC_APPLICATION.Controllers.T4MVC_HomeController();
+    public static MY_MVC_APPLICATION.Controllers.LoginController Login = new MY_MVC_APPLICATION.Controllers.T4MVC_LoginController();
     public static MY_MVC_APPLICATION.Controllers.RolesController Roles = new MY_MVC_APPLICATION.Controllers.T4MVC_RolesController();
     public static MY_MVC_APPLICATION.Controllers.TrafficsController Traffics = new MY_MVC_APPLICATION.Controllers.T4MVC_TrafficsController();
     public static MY_MVC_APPLICATION.Controllers.UsersController Users = new MY_MVC_APPLICATION.Controllers.T4MVC_UsersController();

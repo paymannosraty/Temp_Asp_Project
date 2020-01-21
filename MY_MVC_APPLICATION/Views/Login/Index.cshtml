@@ -1,0 +1,43 @@
+﻿@model Models.User
+
+@{
+	string title = "Login";
+	ViewBag.Title = title;
+}
+
+@*<h2>@title</h2>*@
+
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+
+	<div class="form-horizontal">
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.Label("Username", htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-sm-9">
+				@Html.TextBoxFor(model => model.Username, htmlAttributes: new { @class = "control-label input-group" })
+				@Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			@Html.Label("Password", htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-sm-9">
+				@Html.PasswordFor(model => model.Password, htmlAttributes: new { @class = "control-label input-group" })
+				@Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+			</div>
+		</div>
+
+		<div class="col-sm-9 col-sm-offset-2">
+			<button type="submit" class="btn btn-primary">Sign in</button>
+			<a href="@Url.Action(actionName: "Create", controllerName: "Users")">
+				<input type="button" class="btn btn-primary" value="Sign Up" />
+			</a>
+		</div>
+	</div>
+}

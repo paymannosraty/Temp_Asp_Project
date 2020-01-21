@@ -7,9 +7,12 @@
 	@(title)
 </h2>
 
+@Html.AntiForgeryToken()
+
 @Html.ActionLink("Role", MVC.Roles.Index())
 <br />
 @Html.ActionLink("User", MVC.Users.Index())
 <br />
 @Html.ActionLink("Traffic", MVC.Traffics.Index())
-
+<br />
+@Html.ActionLink("Login", MVC.Login.Index())
